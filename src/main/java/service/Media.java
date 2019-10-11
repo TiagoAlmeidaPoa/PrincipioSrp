@@ -1,7 +1,8 @@
-package application;
+package service;
 
 import entities.Aluno;
 import entities.Curso;
+import entities.Situacao;
 
 public class Media {
 
@@ -14,22 +15,22 @@ public class Media {
 		if (Curso.DIREITO.equals(aluno.getCurso())) {
 
 			if (aluno.getNota() > 6.0) {
-				return Curso.APROVADO;
+				return Situacao.APROVADO;
 			} else {
-				return Curso.REPROVADO;
+				return Situacao.REPROVADO;
 			}
 
 		} else if (Curso.INFORMATICA.equals(aluno.getCurso())) {
 			if (aluno.getNota() > 7.0) {
-				return Curso.APROVADO;
+				return Situacao.APROVADO;
 			} else {
-				return Curso.REPROVADO;
+				return Situacao.REPROVADO;
 			}
 		} else {
 			if (aluno.getNota() > 8.0) {
-				return Curso.APROVADO;
+				return Situacao.APROVADO;
 			} else {
-				return Curso.REPROVADO;
+				return Situacao.REPROVADO;
 			}
 		}
 

@@ -2,10 +2,11 @@ package Test;
 
 import org.junit.Test;
 
-import application.Media;
 import entities.Aluno;
 import entities.Curso;
+import entities.Situacao;
 import junit.framework.TestCase;
+import service.Media;
 
 public class MediaTest extends TestCase {
 
