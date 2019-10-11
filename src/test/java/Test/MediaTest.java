@@ -40,6 +40,44 @@ public class MediaTest extends TestCase {
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
 	}
+	
+	@Test
+	public void testeNotaDireitoInvalidaAcimaDeDez() {
+
+		String nome = "Carlos";
+		double nota = 11.0;
+
+		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
+
+		Media media = new MediaDireito();
+
+		try {
+			media.calcula(aluno);
+			fail("exception não lançada");
+		} catch (Exception e) {
+			assertEquals("Nota invalida", e.getMessage());
+		}
+
+	}
+
+	@Test
+	public void testeNotaDireitoInvalidaAbaixoDeZero() {
+
+		String nome = "Carlos";
+		double nota = -1.0;
+
+		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
+
+		Media media = new MediaDireito();
+
+		try {
+			media.calcula(aluno);
+			fail("exception não lançada");
+		} catch (Exception e) {
+			assertEquals("Nota invalida", e.getMessage());
+		}
+
+	}
 
 	@Test
 	public void testeCursoInformaticaAcimaDaMedia() throws Exception {
@@ -66,6 +104,44 @@ public class MediaTest extends TestCase {
 		Media media = new MediaInformatica();
 
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
+
+	}
+	
+	@Test
+	public void testeNotaInformaticaInvalidaAcimaDeDez() {
+
+		String nome = "Carlos";
+		double nota = 11.0;
+
+		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
+
+		Media media = new MediaInformatica();
+
+		try {
+			media.calcula(aluno);
+			fail("exception não lançada");
+		} catch (Exception e) {
+			assertEquals("Nota invalida", e.getMessage());
+		}
+
+	}
+
+	@Test
+	public void testeNotaInformaticaInvalidaAbaixoDeZero() {
+
+		String nome = "Carlos";
+		double nota = -1.0;
+
+		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
+
+		Media media = new MediaInformatica();
+
+		try {
+			media.calcula(aluno);
+			fail("exception não lançada");
+		} catch (Exception e) {
+			assertEquals("Nota invalida", e.getMessage());
+		}
 
 	}
 
