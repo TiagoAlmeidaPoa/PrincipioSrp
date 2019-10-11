@@ -174,7 +174,7 @@ public class MediaTest extends TestCase {
 	}
 
 	@Test
-	public void testeNotaInvalidaAcimaDeDez() {
+	public void testeNotaMedicinaInvalidaAcimaDeDez() {
 
 		String nome = "Carlos";
 		double nota = 11.0;
@@ -193,7 +193,7 @@ public class MediaTest extends TestCase {
 	}
 
 	@Test
-	public void testeNotaInvalidaAbaixoDeZero() {
+	public void testeNotaMedicinaInvalidaAbaixoDeZero() {
 
 		String nome = "Carlos";
 		double nota = -1.0;
