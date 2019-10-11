@@ -19,7 +19,7 @@ public class MediaTest extends TestCase {
 
 		Media media = new Media();
 
-		assertEquals(Curso.APROVADO, media.calcula(aluno));
+		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
 	}
 
@@ -33,7 +33,7 @@ public class MediaTest extends TestCase {
 
 		Media media = new Media();
 
-		assertEquals(Curso.REPROVADO, media.calcula(aluno));
+		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
 	}
 
@@ -47,7 +47,7 @@ public class MediaTest extends TestCase {
 
 		Media media = new Media();
 
-		assertEquals(Curso.APROVADO, media.calcula(aluno));
+		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
 	}
 
@@ -61,7 +61,7 @@ public class MediaTest extends TestCase {
 
 		Media media = new Media();
 
-		assertEquals(Curso.REPROVADO, media.calcula(aluno));
+		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
 	}
 
@@ -75,7 +75,7 @@ public class MediaTest extends TestCase {
 
 		Media media = new Media();
 
-		assertEquals(Curso.APROVADO, media.calcula(aluno));
+		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
 	}
 
@@ -89,7 +89,7 @@ public class MediaTest extends TestCase {
 
 		Media media = new Media();
 
-		assertEquals(Curso.REPROVADO, media.calcula(aluno));
+		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
 	}
 
