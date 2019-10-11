@@ -7,6 +7,9 @@ import entities.Curso;
 import entities.Situacao;
 import junit.framework.TestCase;
 import service.Media;
+import service.MediaDireito;
+import service.MediaInformatica;
+import service.MediaMedicina;
 
 public class MediaTest extends TestCase {
 
@@ -18,7 +21,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
 
-		Media media = new Media();
+		Media media = new MediaDireito();
 
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
@@ -32,7 +35,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
 
-		Media media = new Media();
+		Media media = new MediaDireito();
 
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
@@ -46,7 +49,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
 
-		Media media = new Media();
+		Media media = new MediaInformatica();
 
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
@@ -60,7 +63,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
 
-		Media media = new Media();
+		Media media = new MediaInformatica();
 
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
@@ -74,7 +77,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
 
-		Media media = new Media();
+		Media media = new MediaMedicina();
 
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
@@ -88,7 +91,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
 
-		Media media = new Media();
+		Media media = new MediaMedicina();
 
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
@@ -102,7 +105,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
 
-		Media media = new Media();
+		Media media = new MediaMedicina();
 
 		try {
 			media.calcula(aluno);
@@ -121,7 +124,7 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
 
-		Media media = new Media();
+		Media media = new MediaMedicina();
 
 		try {
 			media.calcula(aluno);
