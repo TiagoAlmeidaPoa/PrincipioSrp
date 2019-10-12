@@ -24,7 +24,6 @@ public class MediaTest extends TestCase {
 		Media media = new MediaDireito();
 
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
-
 	}
 
 	@Test
@@ -38,9 +37,8 @@ public class MediaTest extends TestCase {
 		Media media = new MediaDireito();
 
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
-
 	}
-	
+
 	@Test
 	public void testeNotaDireitoInvalidaAcimaDeDez() {
 
@@ -57,7 +55,6 @@ public class MediaTest extends TestCase {
 		} catch (Exception e) {
 			assertEquals("Nota invalida", e.getMessage());
 		}
-
 	}
 
 	@Test
@@ -76,7 +73,6 @@ public class MediaTest extends TestCase {
 		} catch (Exception e) {
 			assertEquals("Nota invalida", e.getMessage());
 		}
-
 	}
 
 	@Test
@@ -90,7 +86,6 @@ public class MediaTest extends TestCase {
 		Media media = new MediaInformatica();
 
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
-
 	}
 
 	@Test
@@ -104,9 +99,8 @@ public class MediaTest extends TestCase {
 		Media media = new MediaInformatica();
 
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
-
 	}
-	
+
 	@Test
 	public void testeNotaInformaticaInvalidaAcimaDeDez() {
 
@@ -123,7 +117,6 @@ public class MediaTest extends TestCase {
 		} catch (Exception e) {
 			assertEquals("Nota invalida", e.getMessage());
 		}
-
 	}
 
 	@Test
