@@ -1,7 +1,7 @@
 package Test;
 
-import org.junit.Test;
 
+import org.junit.Test;
 import application.Media;
 import entities.Aluno;
 import entities.Curso;
