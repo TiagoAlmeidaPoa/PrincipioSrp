@@ -1,5 +1,9 @@
 package Test;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import entities.Aluno;
@@ -9,8 +13,13 @@ import junit.framework.TestCase;
 import service.Media;
 
 public class MediaTest extends TestCase {
-	
-	private Media media = new Media();	
+
+	private static Media media;
+
+	@BeforeClass
+	public void setUp() {
+		media = new Media();
+	}
 
 	@Test
 	public void testeCursoDireitoAcimaDaMedia() throws Exception {
