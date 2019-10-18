@@ -7,11 +7,10 @@ import entities.Curso;
 import entities.Situacao;
 import junit.framework.TestCase;
 import service.Media;
-import service.MediaDireito;
-import service.MediaInformatica;
-import service.MediaMedicina;
 
 public class MediaTest extends TestCase {
+	
+	private Media media = new Media();	
 
 	@Test
 	public void testeCursoDireitoAcimaDaMedia() throws Exception {
@@ -20,8 +19,6 @@ public class MediaTest extends TestCase {
 		double nota = 6.1;
 
 		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
-
-		Media media = new MediaDireito();
 
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 	}
@@ -34,8 +31,6 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
 
-		Media media = new MediaDireito();
-
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 	}
 
@@ -46,8 +41,6 @@ public class MediaTest extends TestCase {
 		double nota = 11.0;
 
 		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
-
-		Media media = new MediaDireito();
 
 		try {
 			media.calcula(aluno);
@@ -65,8 +58,6 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.DIREITO);
 
-		Media media = new MediaDireito();
-
 		try {
 			media.calcula(aluno);
 			fail("exception não lançada");
@@ -83,8 +74,6 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
 
-		Media media = new MediaInformatica();
-
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 	}
 
@@ -96,8 +85,6 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
 
-		Media media = new MediaInformatica();
-
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 	}
 
@@ -108,8 +95,6 @@ public class MediaTest extends TestCase {
 		double nota = 11.0;
 
 		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
-
-		Media media = new MediaInformatica();
 
 		try {
 			media.calcula(aluno);
@@ -126,8 +111,6 @@ public class MediaTest extends TestCase {
 		double nota = -1.0;
 
 		Aluno aluno = new Aluno(nome, nota, Curso.INFORMATICA);
-
-		Media media = new MediaInformatica();
 
 		try {
 			media.calcula(aluno);
@@ -146,8 +129,6 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
 
-		Media media = new MediaMedicina();
-
 		assertEquals(Situacao.APROVADO, media.calcula(aluno));
 
 	}
@@ -160,8 +141,6 @@ public class MediaTest extends TestCase {
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
 
-		Media media = new MediaMedicina();
-
 		assertEquals(Situacao.REPROVADO, media.calcula(aluno));
 
 	}
@@ -173,8 +152,6 @@ public class MediaTest extends TestCase {
 		double nota = 11.0;
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
-
-		Media media = new MediaMedicina();
 
 		try {
 			media.calcula(aluno);
@@ -192,8 +169,6 @@ public class MediaTest extends TestCase {
 		double nota = -1.0;
 
 		Aluno aluno = new Aluno(nome, nota, Curso.MEDICINA);
-
-		Media media = new MediaMedicina();
 
 		try {
 			media.calcula(aluno);
